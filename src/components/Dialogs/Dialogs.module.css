@@ -1,0 +1,43 @@
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas: 'name message';
+}
+
+.dialogItems {
+    grid-area: name;
+}
+.dialogItems .active{
+    color: white;
+}
+
+.dialog{
+    padding-top: 10px;
+}
+.dialog a{
+    text-decoration: none;
+    color: #3F536B;
+    
+}
+
+.dialog a.activeNavlink{
+    color: white;
+    
+}
+
+.messages {
+    grid-area: message;
+    
+}
+
+.message {
+    padding-top: 10px;
+    color: #3F536B;
+}
+
+.imgAvatar {
+    width: 70px;
+    border-radius: 50%;
+    opacity: 45%;
+}

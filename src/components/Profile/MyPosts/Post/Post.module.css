@@ -1,0 +1,13 @@
+
+.item {
+    color: #3F536B;
+}
+
+.appWrapperContent .myPost {
+    margin: 20px 0 0 20px;
+  }
+
+.imgMiniAvatar {
+    width: 43px;
+    border-radius: 50%;
+}
