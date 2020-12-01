@@ -28,7 +28,7 @@ export let store = {
                 { message: 'So, what are your plans for this weekend?' },
                 { message: 'Do you want to get together or something?' },
                 { message: 'How about going to see a movie?' },
-                { message: 'That sounds like a good idea.' }
+                { message: 'That sounds like a good idea!' }
             ],
             newMessageText: 'hello'
         },
