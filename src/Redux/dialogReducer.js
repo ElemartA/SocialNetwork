@@ -11,7 +11,24 @@ export  const updateNewMessageActionCreator = (text) => {
     return {type:'UPDATE-NEW-MESSAGE-TEXT', newText: text};
 }
 
-const dialogReducer = (state, action) => {
+let initialState = {
+    dialogs: [
+        { name: 'Alena', id: 1 },
+        { name: 'Anna', id: 2 },
+        { name: 'Raisa', id: 3 },
+        { name: 'Oleg', id: 4 },
+        { name: 'Denis', id: 5 }
+    ],
+    messages: [
+        { message: 'So, what are your plans for this weekend?' },
+        { message: 'Do you want to get together or something?' },
+        { message: 'How about going to see a movie?' },
+        { message: 'That sounds like a good idea!' }
+    ],
+    newMessageText: 'hello'
+}
+
+const dialogReducer = (state = initialState, action) => {
     switch (action.type) {
         case UPDATE_NEW_MESSAGE_TEXT:
             state.newMessageText = action.newText;
