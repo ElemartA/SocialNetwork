@@ -18,7 +18,7 @@ const Dialogs = (props) => {
             let text = newMessageElement.current.value;
             props.updateNewMessage(text);
         }
-
+        
     return (
         <div className={s.dialogs}>
             <div className={s.dialogItems}>

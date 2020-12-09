@@ -20,36 +20,32 @@ let initialState = {
         { name: 'Denis', id: 5 }
     ],
     messages: [
-        { message: 'So, what are your plans for this weekend?' },
-        { message: 'Do you want to get together or something?' },
-        { message: 'How about going to see a movie?' },
-        { message: 'That sounds like a good idea!' }
+        { id: 1, message: 'So, what are your plans for this weekend?' },
+        { id: 2, message: 'Do you want to get together or something?' },
+        { id: 3, message: 'How about going to see a movie?' },
+        { id: 4, message: 'That sounds like a good idea!' }
     ],
     newMessageText: 'hello'
 }
 
 const dialogReducer = (state = initialState, action) => {
+    
     switch (action.type) {
-        case UPDATE_NEW_MESSAGE_TEXT:{
-            let stateCopy = {...state};
-            stateCopy.newMessageText = action.newText;
-            return stateCopy;
-        }
-        case ADD_MESSAGE:{
-            let newMessage = {
-                message: state.newMessageText
+        case UPDATE_NEW_MESSAGE_TEXT:
+            return {
+                ...state,
+                newMessageText: action.newText
             };
-            let stateCopy = {...state};
-            stateCopy.messages = [...state.messages];
-            stateCopy.messages.push(newMessage);
-            stateCopy.newMessageText = '';
-            return stateCopy;
-        }
+        case ADD_MESSAGE:
+            let newMessage = state.newMessageText;
+            return {
+                ...state,
+                newMessageText : '',
+                messages: [...state.messages, {id: 5, message: newMessage}]  
+            }
         default:
-            break;
+            return state;
     }
-    return state;
 }
-
 
 export default dialogReducer;

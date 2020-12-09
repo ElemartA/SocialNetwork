@@ -23,6 +23,9 @@ const Nav = (props) => {
         <div className={s.item}>
           <NavLink activeClassName={s.activeNavLink} to='/settings'>Settings</NavLink>
         </div>
+        <div className={s.item}>
+          <NavLink activeClassName={s.activeNavLink} to='/users'>Users</NavLink>
+        </div>
         <Sidebar state = {props.state.friends} />
       </nav>
       
